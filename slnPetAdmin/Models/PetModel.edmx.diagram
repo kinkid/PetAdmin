@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78a13bf663b24d3cb6955d8c63cc105d" Name="Diagram1">
+        <EntityTypeShape EntityType="petstationModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.animalData" Width="1.5" PointX="5.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.animalData_Condition" Width="1.5" PointX="7.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.animalData_Pic" Width="1.5" PointX="7.5" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.animalData_Type" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.AspNetRoles" Width="1.5" PointX="0.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.AspNetUserClaims" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.AspNetUserLogins" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.AspNetUsers" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.board" Width="1.5" PointX="7.5" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.follow" Width="1.5" PointX="10.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.forum" Width="1.5" PointX="5.25" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.forum_reply" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.map" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.Msg" Width="1.5" PointX="5.25" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.petFAQ" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.petKnows" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.petTodo" Width="1.5" PointX="7.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.remind" Width="1.5" PointX="5.25" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.search" Width="1.5" PointX="5.25" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.shelter" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.aniDataAll" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.aniDataPic" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.aniDataPicOne" Width="1.5" PointX="11.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.aniDataPicOne2" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.boardUser" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.followAni" Width="1.5" PointX="13.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="petstationModel.MsgUser" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="petstationModel.FK__animalDat__anima__19AACF41" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.FK__animalDat__condi__251C81ED" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.FK__board__board_ani__1B5E0D89" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.FK__follow__follow_a__25DB9BFC" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.FK__petTodo__petTodo__46B27FE2" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.FK__board__board_use__1C5231C2" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.FK__follow__follow_u__24E777C3" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.FK__forum__forum_use__3AD6B8E2" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.FK__Msg__msgTo_userI__45544755" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.FK__remind__remind_u__3335971A" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.FK__search__Search_u__30592A6F" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.AspNetUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.giveAnimal" ManuallyRouted="false" />
+        <AssociationConnector Association="petstationModel.pair" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
