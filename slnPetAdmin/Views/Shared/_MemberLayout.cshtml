@@ -42,41 +42,46 @@
                 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span><span class="icon-bar">
                     </span><span class="icon-bar"></span><span class="icon-bar"></span>
-                </button>@Html.ActionLink("Pet Go!", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </button>
             </div>
             <div class="navbar-collapse collapse" id="navbar">
-                <ul class="nav navbar-nav navbar-right">
-
+                
                     @using Microsoft.AspNet.Identity
                     @if (Request.IsAuthenticated)
+            {
+
+                if (User.Identity.GetUserName().Equals("cr4iii9204@gmail.com"))
+                {
+                    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                     {
-                        @Html.AntiForgeryToken()
+                                @Html.AntiForgeryToken()
 
-                        <li>@Html.ActionLink("關於我們", "About", "Home", new { area = "" })</li>
-                        <li>@Html.ActionLink("認養專區", "show", "aniData", new { area = "" })</li>
-                        <li>@Html.ActionLink("送養專區", "showForAdopt", "aniData", new { id = User.Identity.GetUserId() }, new {title = "showForAdopt" })</li>
-                        <li>@Html.ActionLink("寵物幫手", "Help", "Home", new { area = "" })</li>
-                        @*<li>@Html.ActionLink("商 城", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>*@
-
-                        @*@Html.Partial("_LoginPartial")*@
-
-                        @Html.Partial("_LoginPartial",
-                          new ViewDataDictionary { { "id", User.Identity.GetUserId() } }
-            );
-
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>
+                                        @Html.ActionLink("管理人 " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("變更密碼", "Index", "Manage", new { area = "" }, new { @class = "navbar-brand" })
+                                    </li>
+                                    <li><a href="javascript:document.getElementById('logoutForm').submit()">登出</a></li>
+                                </ul>
+                            }
+                        }
+                        else
+                        {
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>僅提供管理者使用</li>
+                                <li> @Html.ActionLink("登入", "Login", "Account", new { area = "" }, new { @class = "navbar-brand" })</li>
+                            </ul>
+                        }
 
                     }
                     else
                     {
-
-                        <li>@Html.ActionLink("關於我們", "About", "Home", new { area = "" })</li>
-                        <li>@Html.ActionLink("認養專區", "show", "aniData", new { area = "" })</li>
-                        <li>@Html.ActionLink("送養專區", "showForAdopt", "aniData", new { area = "" })</li>
-                        <li>@Html.ActionLink("寵物幫手", "Help", "Home", new { area = "" })</li>
-                        @*<li>@Html.ActionLink("商 城", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>*@
-                        @Html.Partial("_LoginPartial")
+                        <ul class="nav navbar-nav navbar-right">
+                            <li> @Html.ActionLink("登入", "Login", "Account", new { area = "" }, new { @class = "navbar-brand" })</li>
+                        </ul>
                     }
-                </ul>
             </div>
             <!---->
             <!-- /.nav-collapse-->
@@ -88,52 +93,38 @@
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu" id="nav-accordion">
 
-                    <p class="centered"><img src="~/Content/Member/assets/img/ui-sam.png" class="img-circle" width="60"></p>
+                    <p class="centered"></p>
 
                     <h5 class="centered"> @User.Identity.GetUserName()</h5>
 
                     <li class="mt">
                         <a href="@Url.Action("index","Manage")">
                             <i class="fa fa-dashboard"></i>
-                            <span>功能表</span>
+                            <span>動物基本資料管理</span>
                         </a>
                     </li>
 
                     <li class="sub-menu">
                         <a href="@Url.Action("ChangePassword","Manage")">
                             <i class="fa fa-desktop"></i>
-                            <span>基本資料設定</span>
+                            <span>會員資料管理</span>
                         </a>
                     </li>
                     <li class="sub-menu">
                         <a href="@Url.Action("MsgList","aniData",new { id = @User.Identity.GetUserId()})">
                             <i class="fa fa-tasks"></i>
-                            <span>訊息匣</span>
+                            <span>寵物幫手管理</span>
                         </a>
 
                     </li>
                     <li class="sub-menu">
                         <a href="@Url.Action("followAni","aniData",new { id = @User.Identity.GetUserId()})">
                             <i class="fa fa-book"></i>
-                            <span>追蹤管理</span>
+                            <span>其他資料管理</span>
                         </a>
 
                     </li>
-                    <li class="sub-menu">
-                        <a href="@Url.Action("showForAdopt_part","aniData",new { id = @User.Identity.GetUserId()})">
-                            <i class="fa fa-cogs"></i>
-                            <span>送養管理</span>
-                        </a>
-
-                    </li>
-                    <li class="sub-menu">
-                        <a href="@Url.Action("getAni","aniData",new { id = @User.Identity.GetUserId()})">
-                            <i class="fa fa-cogs"></i>
-                            <span>已收養管理</span>
-                        </a>
-
-                    </li>
-             
+                                 
 
                 </ul>
                 <!-- sidebar menu end-->

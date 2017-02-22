@@ -18,9 +18,47 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("登入", "Login", "Account", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("後台管理", "Index", "Manage", new { area = "" }, new { @class = "navbar-brand" })
+               @using Microsoft.AspNet.Identity
+            @if (Request.IsAuthenticated)
+            {
 
+                if (User.Identity.GetUserName().Equals("cr4iii9204@gmail.com"))
+                {
+                    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                @Html.ActionLink("您好 " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                            </li>
+                            <li>
+                                @Html.ActionLink("後台管理", "Index", "Manage", new { area = "" }, new { @class = "navbar-brand" })
+                            </li>
+                            <li><a href="javascript:document.getElementById('logoutForm').submit()">登出</a></li>
+                        </ul>
+                    }
+                }
+                else
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>僅提供管理者使用</li>
+                        <li> @Html.ActionLink("登入", "Login", "Account", new { area = "" }, new { @class = "navbar-brand" })</li>
+                    </ul>
+                }
+
+            }
+            else
+            {
+                <ul class="nav navbar-nav navbar-right">
+                    <li> @Html.ActionLink("登入", "Login", "Account", new { area = "" }, new { @class = "navbar-brand" })</li>
+                </ul>
+            }
+                
+                
+               
+              
+               
             </div>
         </div>
     </div>

@@ -13,6 +13,27 @@ namespace slnPetAdmin.Controllers
             return View();
         }
 
-       
+        public ActionResult aniIndex()
+        {
+            return View();
+        }
+
+        public ActionResult memIndex()
+        {
+            return View();
+        }
+
+        public ActionResult helpIndex()
+        {
+            return View();
+        }
+
+        public ActionResult otherIndex()
+        {
+            return View();
+        }
+
+
+
     }
 }
