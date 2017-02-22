@@ -12,7 +12,12 @@
                 <h3>PETGO管理頁面</h3>
                 <div class="row mt">
                     <!-- SERVER STATUS PANELS -->
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
 
+    if (User.Identity.GetUserName().Equals("cr4iii9204@gmail.com"))
+    {
                     <a href=@Url.Action("aniIndex", "Home")>
                         <div class="col-lg-6 col-md-6 col-sm-6 mb">
                             <div class="content-panel pn">
@@ -93,22 +98,38 @@
                         @*</a>*@
 
 
+    }
+}
+else
+{
+    <a href=@Url.Action("Login", "Account")>
+        <div class="col-lg-6 col-md-6 col-sm-6 mb">
+            <div class="content-panel pn">
+                <div id="spotify" style="background: url(http://i.imgur.com/nWPJSGc.jpg) no-repeat center top;
+                                    background-position: 50% 50%;
+                                    background-size: 100% auto;">
+                    <div class="col-xs-4 col-xs-offset-8">
+                        <div class="btn btn-sm btn-clear-g" ;> Manage</div>
+                    </div>
+                    <div class="sp-title">
+                        <h3 style="color:#000"></h3>
+                    </div>
+
+                </div>
+                <p class="followers"><i class="fa fa-map-marker"></i><h3 style="color:#000">請先登入帳號</h3></p>
+            </div>
+        </div><!--/col-md-4-->
+    </a>
+
+}
 
 
 
 </div><!-- /row -->
-                <div class="row mt">
-                    <!--CUSTOM CHART START -->
-                    <div class="border-head">
-                        <h3></h3>
-                    </div>
-                    <!--custom chart end-->
-                </div><!-- /row -->
-
+                
             </div><!-- /col-lg-9 END SECTION MIDDLE -->
 
 
         </div>        
     </section>
 </section>
-
