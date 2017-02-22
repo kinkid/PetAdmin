@@ -51,13 +51,17 @@ namespace slnPetAdmin.Models
         [Required]
         [Display(Name = "電子郵件")]
         [EmailAddress]
-        public string Email { get; set; }
+        public string Email{ get; set; }
 
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "密碼")]
         public string Password { get; set; }
 
+        //[Display(Name = "後台密碼")]
+        //public string PhoneNumber { get; set; }
+
+        
         [Display(Name = "記住我?")]
         public bool RememberMe { get; set; }
     }
