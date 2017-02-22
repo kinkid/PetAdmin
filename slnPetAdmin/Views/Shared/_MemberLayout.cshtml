@@ -98,7 +98,14 @@
                     <h5 class="centered"> @User.Identity.GetUserName()</h5>
 
                     <li class="mt">
-                        <a href="@Url.Action("index","Manage")">
+                        <a href=@Url.Action("Index", "Home")>
+                            <i class="fa fa-dashboard"></i>
+                            <span>首頁</span>
+                        </a>
+                    </li>
+
+                    <li class="mt">
+                        <a href=@Url.Action("aniIndex", "Home")>
                             <i class="fa fa-dashboard"></i>
                             <span>動物基本資料管理</span>
                         </a>

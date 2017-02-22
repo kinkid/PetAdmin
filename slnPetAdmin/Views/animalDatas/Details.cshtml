@@ -1,0 +1,174 @@
+﻿@model slnPetAdmin.Models.animalData
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+}
+
+<section id="main-content">
+    <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i>詳細資訊</h3>
+        <div class="row mt">
+            <div class="col-md-12">
+                <div class="content-panel">
+                    <div>
+                        <div>
+                            <h4>動物資詳細資訊</h4>
+                            <hr />
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalKind)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalKind)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalType)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalType)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalName)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalName)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalAddress)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalAddress)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalDate)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalDate)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalGender)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalGender)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalAge)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalAge)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalColor)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalColor)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalBirth)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalBirth)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalChip)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalChip)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalHealthy)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalHealthy)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalDisease_Other)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalDisease_Other)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalOwner_userID)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalOwner_userID)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalReason)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalReason)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalGetter_userID)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalGetter_userID)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalAdopted)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalAdopted)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalAdoptedDate)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalAdoptedDate)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.animalNote)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.animalNote)
+                                </dd>
+
+                            </dl>
+                        </div>
+                        <p>
+                            @Html.ActionLink("Edit", "Edit", new { id = Model.animalID }) |
+                            @Html.ActionLink("Back to List", "Index")
+                        </p>
+                    </div>
+            </div><!-- /content-panel -->
+        </div><!-- /col-md-12 -->
+        </div><!-- /row -->
+    </section><!--/wrapper -->
+</section><!-- /MAIN CONTENT -->

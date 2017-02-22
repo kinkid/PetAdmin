@@ -28,7 +28,6 @@
         <EntityTypeShape EntityType="petstationModel.shelter" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="petstationModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="petstationModel.aniDataAll" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="petstationModel.aniDataPic" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="petstationModel.aniDataPicOne" Width="1.5" PointX="11.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="petstationModel.aniDataPicOne2" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="petstationModel.boardUser" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
@@ -50,6 +49,7 @@
         <AssociationConnector Association="petstationModel.AspNetUserRoles" ManuallyRouted="false" />
         <AssociationConnector Association="petstationModel.giveAnimal" ManuallyRouted="false" />
         <AssociationConnector Association="petstationModel.pair" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="petstationModel.aniDataPic" Width="1.5" PointX="13.375" PointY="14.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
